@@ -18,9 +18,9 @@
             <p>Dalam genggaman laptop, terdapat potensi tak terbatas untuk membangun, belajar, dan mengubah dunia.</p>
 
             <div class="mt-10">
-                <a href="{{ route('adminmenu') }}" class="bg-violet-950 rounded-3xl py-3 px-8 font-medium inline-block mr-4
+                <a href="{{ route('login') }}" class="bg-violet-950 rounded-3xl py-3 px-8 font-medium inline-block mr-4
                 hover:bg-transparent hover:border-violet-400 hover:text-white duration-300 hover:border border border-transparent">Login</a>
-                <a href="{{ route('usermenu') }}">Download App <span class="text-lg inline-block rotate-90">&#10145;</span></a>
+                <a href="#">Download App <span class="text-lg inline-block rotate-90">&#10145;</span></a>
             </div>
         </div>
     </div>
