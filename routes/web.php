@@ -15,4 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
+Route::get('/admin/adminmenu', function () {
+    return view('admin.adminmenu');
+})->name('adminmenu');
+
+Route::get('/user/usermenu', function () {
+    return view('user.usermenu');
+})->name('usermenu');

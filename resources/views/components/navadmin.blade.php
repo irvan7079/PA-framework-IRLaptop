@@ -10,18 +10,14 @@
                 <li class="list-none inline-block px-5"><a href="#"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Review</a></li>
                 <li class="list-none inline-block px-5"><a href="#"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Contact</a></li>
             </ul>
-            <img src="{{ asset('assets/images/cartremove.png') }}" alt="" class="h-[50px] cursor-pointer">
+                <a href="{{ route('welcome') }}" class="bg-violet-950 rounded-3xl py-3 px-8 font-bold inline-block mr-4
+                hover:bg-transparent hover:border-violet-400 hover:text-white duration-300 hover:border border border-transparent">Logout</a>
         </nav>
 
-        <div class="text-white mt-48">
-            <h1 class="text-6xl font-semibold leading-normal">IR <br>Laptop Store <br></h1>
+        <div class="text-violet-500 mt-48">
+            <ul class="text-6xl font-semibold leading-normal">IR (ADMIN)<br>Laptop Store <br></ul>
             <p>Dalam genggaman laptop, terdapat potensi tak terbatas untuk membangun, belajar, dan mengubah dunia.</p>
 
-            <div class="mt-10">
-                <a href="{{ route('adminmenu') }}" class="bg-violet-950 rounded-3xl py-3 px-8 font-medium inline-block mr-4
-                hover:bg-transparent hover:border-violet-400 hover:text-white duration-300 hover:border border border-transparent">Login</a>
-                <a href="{{ route('usermenu') }}">Download App <span class="text-lg inline-block rotate-90">&#10145;</span></a>
-            </div>
         </div>
     </div>
 </header>
