@@ -1,0 +1,9 @@
+@extends('layouts.global')
+@section('content')
+ @include('components.navbar')
+ @include('components.home')
+ @include('components.category')
+ @include('components.menu')
+ @include('components.review')
+ @include('components.footer')
+@endsection
