@@ -1,5 +1,5 @@
 <section id="home">
-    <div class="container flex flex-col items-center gap-10">
+    <div id="about" class="container flex flex-col items-center gap-10">
         <div class="text-center">
             <h1 class="font-oswald font-bold uppercase">IR Laptop</h1>
             <div class="seperator mx-auto"></div>

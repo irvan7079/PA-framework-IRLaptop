@@ -1,6 +1,6 @@
 <footer>
     <section>
-        <div class="mt-10 container bg-violet-950">
+        <div id="footer" class="mt-10 container bg-violet-950">
             <ul class="grid grid-cols-1 items-start gap-5 pb-5 md:grid-cols-2 lg:grid-cols-4">
                 <li>
                     <div class="space-y-4 pl-10">

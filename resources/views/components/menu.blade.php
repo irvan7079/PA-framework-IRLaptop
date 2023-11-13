@@ -1,5 +1,5 @@
 <section id="menu">
-    <div class="container mb-10">
+    <div id="menu" class="container mb-10">
         <div class="max-w-md mx-auto text-center">
             <h2 class="font-oswald font-bold uppercase">OUR BEST MENU</h2>
             <div class="seperator mx-auto"></div>

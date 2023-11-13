@@ -1,5 +1,5 @@
 <section id="review" class="bg-black-950 py-20 ">
- <div class="container">
+ <div id="review" class="container">
     <div class="max-w-md mx-auto text-center">
         <h2 class="font-oswald font-bold uppercase">Customer Review</h2>
         <div class="seperator mx-auto"></div>

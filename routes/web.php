@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Models\Laptop;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,4 +55,18 @@ Route::middleware('auth')-> group(function () {
         "laptop" => Laptop::all()
         ]);
         })->name('admin.laptop');
+
+    Route::get('/admin/akun', function () {
+        return view('admin.akun', [
+        "user" => User::all()
+        ]);
+        })->name('admin.akun');
+
+    Route::get('/admin/riwayat', function () {
+        return view('admin.riwayat', [
+        "user" => User::all()
+        ]);
+        })->name('admin.riwayat');
     });
+
+
