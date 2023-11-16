@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('riwayats', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_transaksi')->constrained();
-            $table->foreignId('id_user')->constrained();
+            $table->foreignId('transaksi_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->string('nama_user_r');
             $table->string('merk_laptop_r');
             $table->integer('harga_laptop_r');

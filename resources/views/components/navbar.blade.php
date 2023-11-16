@@ -10,7 +10,6 @@
                 <li class="list-none inline-block px-5"><a href="#review"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Review</a></li>
                 <li class="list-none inline-block px-5"><a href="#footer"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Contact</a></li>
             </ul>
-            <img src="{{ asset('assets/images/cartremove.png') }}" alt="" class="h-[50px] cursor-pointer">
         </nav>
 
         <div class="text-white mt-48">
@@ -20,7 +19,6 @@
             <div class="mt-10">
                 <a href="{{ route('login') }}" class="bg-violet-950 rounded-3xl py-3 px-8 font-medium inline-block mr-4
                 hover:bg-transparent hover:border-violet-400 hover:text-white duration-300 hover:border border border-transparent">Login</a>
-                <a href="#">Download App <span class="text-lg inline-block rotate-90">&#10145;</span></a>
             </div>
         </div>
     </div>

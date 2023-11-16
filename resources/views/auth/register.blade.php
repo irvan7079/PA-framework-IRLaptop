@@ -55,10 +55,9 @@
                     </div>
                     <div class="w-full flex justify-between mt-4">
                         <a href="{{ route('login') }}" class=" text-sm text-end text-violet-500 hover:font-medium">Already have an account</a>
-                        <a href="#" class=" text-sm text-end text-violet-500 hover:font-medium">Forgot password?</a>
                     </div>
                     <button type="submit" class="w-full h-auto py-4 mt-16 text-white font-medium bg-violet-800 rounded-md flex justify-center items-center hover:bg-violet-700">
-                        Kirim
+                        Daftar
                     </button>
                 </form>
             </div>

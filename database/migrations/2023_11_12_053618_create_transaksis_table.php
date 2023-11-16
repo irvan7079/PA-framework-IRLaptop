@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('harga_laptop_t');
             $table->integer('jumlah_laptop');
             $table->integer('total_harga');
-            $table->foreignId('id_laptop')->constrained();
+            $table->foreignId('laptop_id')->constrained();
             $table->timestamps();
         });
     }

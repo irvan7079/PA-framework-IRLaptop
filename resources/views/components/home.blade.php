@@ -14,7 +14,7 @@
                 <div class="text-center">
                     <i class="ri-store-line text-violet-700 text-4xl mx-10"></i>
                     <br />
-                    25 Store
+                    25 Product
                 </div>
 
                 <div class="text-center">

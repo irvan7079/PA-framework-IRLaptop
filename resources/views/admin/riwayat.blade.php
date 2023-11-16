@@ -12,7 +12,7 @@
                         <thead class="text-xs text-violet-500 uppercase bg-gray-900">
                             <tr>
                                 <th scope="col" class="px-6 py-3">
-                                    Id Riwayat
+                                    No.
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Username Pembeli
@@ -35,10 +35,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($user as $usr)
+                            @foreach ($user as $index => $usr)
                                 <tr class="bg-gray-900 border-b hover:bg-violet-900 text-white font-medium hover:text-white">
                                     <th scope="row" class="px-6 py-4 whitespace-nowrap">
-                                        {{ $usr->id }}
+                                        {{ ++$index }}
                                     </th>
                                     <td class="px-6 py-4">
                                         {{ $usr->username }}

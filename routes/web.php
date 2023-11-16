@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LaptopController;
 use App\Models\Laptop;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -17,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        "laptop" => Laptop::all()
+    ]);
 })->name('welcome');
 
 Route::get('/register', function () {
@@ -43,11 +46,15 @@ Route::get('/auth', function () {
 
 Route::middleware('auth')-> group(function () {
     Route::get('/admin/adminmenu', function () {
-        return view('admin.adminmenu');
+        return view('admin.adminmenu', [
+        "laptop" => Laptop::all()
+        ]);
     })->name('adminmenu');
 
     Route::get('/user/usermenu', function () {
-        return view('user.usermenu');
+        return view('user.usermenu', [
+            "laptop" => Laptop::all()
+            ]);
     })->name('usermenu');
 
     Route::get('/admin/laptop', function () {
@@ -69,4 +76,14 @@ Route::middleware('auth')-> group(function () {
         })->name('admin.riwayat');
     });
 
+    Route::get('/admin/addlaptop', function () {
+        return view('admin.addlaptop');
+    })->name('admin.addlaptop');
 
+Route::controller(LaptopController::class)->group(function () {
+    Route::post('/admin/laptop/add/action', 'add')->name('admin.add');
+    Route::get('/admin/laptop/edit/{id}', 'edit')->name('admin.edit');
+    Route::post('/admin/laptop/edit/{id}/action','update')->name('admin.update');
+    Route::post('/admin/laptop/delete/{id}/action', 'delete')->name('admin.delete');
+    Route::post('/admin/akun/delete/{id}/action', 'deleteakun')->name('admin.deleteakun');
+});
