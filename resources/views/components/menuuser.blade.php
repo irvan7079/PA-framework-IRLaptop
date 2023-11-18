@@ -3,8 +3,7 @@
         <div class="max-w-md mx-auto text-center">
             <h2 class="font-oswald font-bold uppercase">OUR BEST PRODUCT</h2>
             <div class="seperator mx-auto"></div>
-            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non amet,
-                 explicabo maiores vel reprehenderit in maxime ipsum animi minus dicta libero voluptatem eaque atque dolore nemo, ipsa error voluptatum illum.</p>
+            <p class="paragraph">Sebuah toko laptop bukan hanya menyediakan barang, tetapi membawa kita pada perjalanan eksplorasi di dunia digital yang tak terhingga, memberi kita kekuatan untuk mewujudkan mimpi-mimpi kita yang paling ambisius.</p>
         </div>
         <div class="tabs_wrap">
             <ul class="flex flex-wrap justify-center gap-3 py-10">
