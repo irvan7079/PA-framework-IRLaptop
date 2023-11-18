@@ -7,6 +7,10 @@
             <div class="h-auto m-4 p-8 bg-gray-900 rounded-lg drop-shadow-md">
                 <p class="text-4xl font-bold mb-4 text-violet-500">Daftar Riwayat Pembelian User</p>
                 <hr><br>
+                <form action="/admin/laptop/searchriwayat" class="form-inline" method="GET">
+                    <input type="search" name="searchriwayat" class="px-2 w-[300px] py-2 bg-gray-800 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-violet-500" placeholder="Masukkan Username Pembeli">
+                        <button type="submit" class="px-2 py-2 bg-violet-800 hover:bg-violet-600 rounded-md text text-black hover:text-white font-semibold duration-300">Cari Riwayat</button>
+                </form><br>
                 <div class="relative overflow-x-auto">
                     <table class="w-full text-sm text-left text-gray-500">
                         <thead class="text-xs text-violet-500 uppercase bg-gray-900">

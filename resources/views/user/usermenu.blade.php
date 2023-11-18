@@ -3,7 +3,7 @@
  @include('components.navuser')
  @include('components.home')
  @include('components.category')
- @include('components.menu')
+ @include('components.menuuser')
  @include('components.review')
  @include('components.footer')
 @endsection

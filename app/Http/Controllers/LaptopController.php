@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Laptop;
+use App\Models\Transaksi;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -19,7 +20,7 @@ class LaptopController extends Controller
         ]);
 
         $lastlaptop = (int) Laptop::max('id');
-        $newlaptopId = $lastlaptop + 1; // ID laptop terakhir + 1
+        $newlaptopId = $lastlaptop + 1;
 
         if ($request->File('image_path')) {
             // dd($request->file('image_path'));
@@ -87,5 +88,87 @@ class LaptopController extends Controller
         $user->delete();
 
         return redirect()->route('admin.akun')->with('success', 'Akun berhasil dihapus.');
+    }
+
+    public function searchlaptop(Request $request){
+        if ($request->has('searchlaptop')) {
+            $laptop = laptop::where('merk_laptop', 'LIKE', "%".$request->searchlaptop."%")->get();
+        } else {
+            $laptop = laptop::all();
+        }
+        return view("admin.laptop", ['laptop'=> $laptop]);
+    }
+
+    public function filterwelcome(Request $request){
+        $filter = $request->input('filter');
+        if ($filter === '<10jt') {
+            $laptop = Laptop::where('harga_laptop', '<', 10000000)->get();
+        } else if ($filter === '10jt-20jt') {
+            $laptop = Laptop::whereBetween('harga_laptop', [10000000, 20000000])->get();
+        } else if ($filter === '>20jt') {
+            $laptop = Laptop::where('harga_laptop', '>', 20000000)->get();
+        } else {
+            $laptop = laptop::all();
+        }
+        return view("welcome", ['laptop'=> $laptop]);
+    }
+
+    public function filteruser(Request $request){
+        $filter = $request->input('filter');
+        if ($filter === '<10jt') {
+            $laptop = Laptop::where('harga_laptop', '<', 10000000)->get();
+        } else if ($filter === '10jt-20jt') {
+            $laptop = Laptop::whereBetween('harga_laptop', [10000000, 20000000])->get();
+        } else if ($filter === '>20jt') {
+            $laptop = Laptop::where('harga_laptop', '>', 20000000)->get();
+        } else {
+            $laptop = laptop::all();
+        }
+        return view("user.usermenu", ['laptop'=> $laptop]);
+    }
+
+    public function searchakun(Request $request){
+        if ($request->has('searchakun')) {
+            $user = user::where('username', 'LIKE', "%".$request->searchakun."%")->get();
+        } else {
+            $user = user::all();
+        }
+        return view("admin.akun", ['user'=> $user]);
+    }
+
+    public function searchriwayat(Request $request){
+        if ($request->has('searchriwayat')) {
+            $user = user::where('username', 'LIKE', "%".$request->searchriwayat."%")->get();
+        } else {
+            $user = user::all();
+        }
+        return view("admin.riwayat", ['user'=> $user]);
+    }
+
+    public function pembelian($id)
+    {
+        return view('user.pembelian', [
+            'laptops' => laptop::all()->where('id', $id)->first(),
+        ]);
+    }
+
+    public function konfirmasi(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'merk_laptop_t' => 'required|string',
+            'spesifikasi_laptop_t' => 'required|string',
+            'harga_laptop' => 'required|integer',
+            'jumlah_laptop' => 'required|integer',
+        ]);
+
+        $total_harga = $request->harga_laptop * $request->jumlah_laptop;
+
+        $validatedData['total_harga'] = $total_harga;
+
+        Transaksi::create($validatedData);
+
+        return view('user.konfirmasi', [
+            'transaksis' => transaksi::all()->where('id', $id)->first(),
+        ]);
     }
 }

@@ -39,7 +39,7 @@
 
                         <p class="flex items-center gap-2 text-xs">
                             <i class="ri-mail-open-fill text-lg text-white"></i>
-                            wijayacoffee@gmail.com
+                            irlaptop@gmail.com
                         </p>
                     </div>
 

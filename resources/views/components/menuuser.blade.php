@@ -1,5 +1,5 @@
-<section id="menu">
-    <div id="menu" class="container mb-10">
+<section id="menuuser">
+    <div id="menuuser" class="container mb-10">
         <div class="max-w-md mx-auto text-center">
             <h2 class="font-oswald font-bold uppercase">OUR BEST PRODUCT</h2>
             <div class="seperator mx-auto"></div>
@@ -8,7 +8,7 @@
         </div>
         <div class="tabs_wrap">
             <ul class="flex flex-wrap justify-center gap-3 py-10">
-                <form action="/filterwelcome" class="form-inline" method="GET">
+                <form action="/user/usermenu/filteruser" class="form-inline" method="GET">
                     <button type="submit" class="btn bg-violet-950 duration-300 hover:bg-slate-300 hover:text-violet-900">All</button>
                     <button type="submit" class="btn bg-violet-950 duration-300 hover:bg-slate-300 hover:text-violet-900" name="filter" value="<10jt">< 10 Juta</button>
                     <button type="submit" class="btn bg-violet-950 duration-300 hover:bg-slate-300 hover:text-violet-900" name="filter" value="10jt-20jt">10 Juta - 20 Juta</button>
@@ -20,7 +20,7 @@
             <ul class="mx-7 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
                 @foreach ($laptop as $ltp)
                     <li>
-                        <a href="{{ route('login') }}">
+                        <a href="{{ route('user.pembelian', $ltp->id) }}">
                             <div class="h-56 grid place-items-center bg-violet-950 rounded-3xl hover:bg-slate-300 ease-linear duration-200">
                                 <img src="{{ asset($ltp->image_path) }}" alt="" class="w-40 hover:scale-110 ease-linear duration-200">
                             </div>

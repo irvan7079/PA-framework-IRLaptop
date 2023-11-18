@@ -5,10 +5,6 @@
             <img src="{{ asset('assets/images/logoIR.png') }}" alt="logo web" class="h-[75px] cursor-pointer">
             <ul class="flex-1 items-center">
                 <li class="list-none inline-block px-5"><a href="{{ route('adminmenu') }}"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Home</a></li>
-                <li class="list-none inline-block px-5"><a href="#about"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">About</a></li>
-                <li class="list-none inline-block px-5"><a href="#menu"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Menu</a></li>
-                <li class="list-none inline-block px-5"><a href="#review"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Review</a></li>
-                <li class="list-none inline-block px-5"><a href="#footer"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Contact</a></li>
                 <li class="list-none inline-block px-5"><a href="{{ route('admin.laptop') }}"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Daftar Laptop</a></li>
                 <li class="list-none inline-block px-5"><a href="{{ route('admin.akun') }}"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Daftar Akun</a></li>
                 <li class="list-none inline-block px-5"><a href="{{ route('admin.riwayat') }}"  class="no-underline text-white px-2 hover:text-violet-500 duration-300">Daftar Riwayat</a></li>
