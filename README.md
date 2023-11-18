@@ -21,7 +21,7 @@
     </div>
     <div align="center">
     <h2><i>Title : IR Laptop</i></h2>
-        ![](ImagesReadme/logo.png)
+        <a>![](ImagesReadme/logo.png)</a>
     </div>    
 </div>
 <br>
