@@ -4,6 +4,6 @@
  @include('components.home')
  @include('components.category')
  @include('components.menu')
- @include('components.review')
+ @include('components.reviewadmin')
  @include('components.footer')
 @endsection

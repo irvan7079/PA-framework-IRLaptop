@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Laptop;
 use App\Models\Transaksi;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class LaptopController extends Controller
 {
@@ -110,7 +113,7 @@ class LaptopController extends Controller
         } else {
             $laptop = laptop::all();
         }
-        return view("welcome", ['laptop'=> $laptop]);
+        return view("welcome", ['laptop'=> $laptop, 'comment'=> Comment::all()]);
     }
 
     public function filteruser(Request $request){
@@ -124,7 +127,7 @@ class LaptopController extends Controller
         } else {
             $laptop = laptop::all();
         }
-        return view("user.usermenu", ['laptop'=> $laptop]);
+        return view("user.usermenu", ['laptop'=> $laptop, 'comment'=> Comment::all()]);
     }
 
     public function searchakun(Request $request){
@@ -170,5 +173,25 @@ class LaptopController extends Controller
         return view('user.konfirmasi', [
             'transaksis' => transaksi::all()->where('id', $id)->first(),
         ]);
+    }
+
+    public function index(){
+        $endpoint = env('BASE_ENV').'/api/admin/laptop';
+        $data = Http::get($endpoint);
+        return view('admin.laptop',[
+            'laptop'=>$data
+        ]);
+    }
+
+    public function givecomment(Request $request)
+    {
+        $validatedData = $request->validate([
+            'username'=> 'required|string',
+            'isi_komentar' => 'required|string'
+        ]);
+
+        Comment::create($validatedData);
+
+        return redirect()->route('user.usermenu')->with('success', 'Komentar berhasil ditambahkan.');
     }
 }

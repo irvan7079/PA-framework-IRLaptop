@@ -4,8 +4,6 @@
         <h2 class="font-oswald font-bold uppercase">Customer Review</h2>
         <div class="seperator mx-auto"></div>
         <p class="paragraph">Mereka bukan hanya sekadar kata-kata, tetapi merupakan tonggak yang membangun jalan menuju pemahaman yang lebih dalam, memperbaiki kesalahan, dan menginspirasi perubahan positif. Dalam dunia yang terhubung secara digital ini, komentar-komentar yang memberikan nilai, dukungan, dan wawasan menjadi pendorong pertumbuhan dan perkembangan yang tak ternilai harganya.</p><br>
-             <a href="{{ route('user.comment') }}" class="btn btn-primary" class="bg-violet-900 rounded-3xl py-3 px-8 font-medium inline-block mr-4
-            hover:bg-transparent hover:border-violet-400 hover:text-white duration-300 hover:border border border-transparen">Give Comment</a>
     </div>
     <div class="swiper py-10 mx-10">
         <ul class="swiper-wrapper">

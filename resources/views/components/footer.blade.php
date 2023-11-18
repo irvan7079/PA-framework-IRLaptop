@@ -8,8 +8,7 @@
                             IR<span class="text-black font-bold">Laptop</span>
                         </a>
 
-                        <p class="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
-                            ducimus labore maiores corrupti ullam fuga alias nobis totam magnam autem architecto impedit repudiandae, eos sapiente quae illum optio doloribus iste.</p>
+                        <p class="text-xs">Setiap layar yang menyala adalah potensi kreativitas yang siap mengubah dunia, membawa kita pada petualangan yang menggairahkan, dan merangkul perubahan dengan tangan terbuka.</p>
 
                     </div>
                 </li>

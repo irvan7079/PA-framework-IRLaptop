@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\API\ApiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LaptopController;
+use App\Models\Comment;
 use App\Models\Laptop;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome', [
-        "laptop" => Laptop::all()
+        "laptop" => Laptop::all(), "comment" => Comment::all(),
     ]);
 })->name('welcome');
 
@@ -47,7 +49,7 @@ Route::get('/auth', function () {
 Route::middleware(['auth', 'ceklevel:admin'])-> group(function () {
     Route::get('/admin/adminmenu', function () {
         return view('admin.adminmenu', [
-        "laptop" => Laptop::all()
+        "laptop" => Laptop::all(), "comment" => Comment::all(),
         ]);
     })->name('adminmenu');
 
@@ -88,7 +90,7 @@ Route::middleware(['auth', 'ceklevel:admin'])-> group(function () {
 Route::middleware('auth')-> group(function () {
     Route::get('/user/usermenu', function () {
         return view('user.usermenu', [
-            "laptop" => Laptop::all()
+            "laptop" => Laptop::all(), "comment" => Comment::all(),
             ]);
     })->name('user.usermenu');
 
@@ -98,11 +100,16 @@ Route::middleware('auth')-> group(function () {
             ]);
     })->name('user.pembelian');
 
+    Route::get('/user/comment', function () {
+        return view('user.comment');
+    })->name('user.comment');
+
     Route::controller(LaptopController::class)->group(function () {
         Route::get('/user/usermenu/filteruser', 'filteruser')->name('user.filteruser');
         Route::get('/user/pembelian/{id}', 'pembelian')->name('user.pembelian');
         Route::post('/user/pembelian/konfirmasi/{id}','konfirmasi')->name('user.konfirmasi');
         Route::post('/user/pembelian/konfirmasi/{id}/action','beli')->name('user.beli');
+        Route::post('/user/givecomment', 'givecomment')->name('user.givecomment');
     });
 });
 
