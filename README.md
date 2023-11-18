@@ -32,11 +32,11 @@ This final project is a Laptop Store Website
 ## Documentation
 ### 1. Menu
 
-![](ImagesReadme/1.jpg)
-![](ImagesReadme/2.jpg)
-![](ImagesReadme/3.jpg)
-![](ImagesReadme/4.jpg)
-![](ImagesReadme/5.jpg)
+![](ImagesReadme/1.png)
+![](ImagesReadme/2.png)
+![](ImagesReadme/3.png)
+![](ImagesReadme/4.png)
+![](ImagesReadme/5.png)
 
 <div align="center">
     <h1>The End of Readme<br><b><i>IR Laptop</i></b></h1>
